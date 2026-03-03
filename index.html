@@ -1,110 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>N. S. Providers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Segoe+UI&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-    
-    <img src="images/logo.png" alt="Company Logo" class="logo">
+    <div class="container header-container">
+        <img src="images/logo.png" alt="N. S. Providers Logo" class="logo">
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+
+        <nav id="navbar">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#trust">Why Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<section class="hero">
-    
-
-    <div class="hero-container">
-
-        <h1 class="hero-title">
-            Professional Web Development & Digital Infrastructure
-        </h1>
-
-        <p class="hero-subtitle">
-            We design, build, and manage premium digital systems for individuals and businesses who value professionalism, reliability, and long-term quality.
+<!-- HERO SECTION -->
+<section id="home" class="hero reveal">
+    <div class="container">
+        <h1>Professional Web Development & Digital Infrastructure</h1>
+        <p>
+            We design, build, and manage premium digital systems for individuals
+            and businesses who value professionalism, reliability, and long-term quality.
         </p>
 
         <div class="hero-buttons">
-
-            <a href="contact.html" class="btn btn-primary">
-                Request Consultation
-            </a>
-
-            <a href="about.html" class="btn btn-secondary">
-                Learn More
-            </a>
-
+            <a href="#contact" class="btn primary">Request Consultation</a>
+            <a href="about.html" class="btn secondary">Learn More</a>
         </div>
-
     </div>
-
 </section>
 
-<section class="content">
-    
+<!-- SERVICES SECTION -->
+<section id="services" class="section reveal">
+    <div class="container">
+        <h2 class="section-title">Core Services</h2>
 
-    <h2 class="section-title">Core Services</h2>
-
-    <div class="services">
-
-        <div class="card">
-            <h3>Web Development</h3>
-            <p>Custom-built professional websites designed for credibility, performance, and long-term scalability.</p>
-        </div>
-
-        <div class="card">
-            <h3>Digital Infrastructure</h3>
-            <p>Complete setup and management of domains, hosting, email systems, and technical foundations.</p>
-        </div>
-
-        <div class="card">
-            <h3>Professional Consulting</h3>
-            <p>Strategic technical guidance to help you build, launch, and operate with professional standards.</p>
-        </div>
-
+        <div class="grid-3">
+    <div class="card reveal-left">
+        <h3>Web Development</h3>
+        <p>Custom-built professional websites designed for credibility and scalability.</p>
     </div>
 
-</section>
-
-<section class="trust">
-    
-
-    <h2 class="section-title">Professional Standards</h2>
-
-    <div class="trust-points">
-
-        <div class="trust-item">
-            Premium-Quality Implementation
-        </div>
-
-        <div class="trust-item">
-            Transparent Communication
-        </div>
-
-        <div class="trust-item">
-            Long-Term Reliability
-        </div>
-
-        <div class="trust-item">
-            Serious and Professional Approach
-        </div>
-
+    <div class="card reveal">
+        <h3>Digital Infrastructure</h3>
+        <p>Complete setup of domains, hosting, email systems, and technical foundations.</p>
     </div>
 
+    <div class="card reveal-right">
+        <h3>Professional Consulting</h3>
+        <p>Strategic technical guidance to help you operate with professional standards.</p>
+    </div>
+</div>
+    </div>
 </section>
 
+<!-- WHY CHOOSE US -->
+<section id="trust" class="section trust reveal">
+    <div class="container">
+        <h2 class="section-title">Why Choose Us?</h2>
 
+        <div class="grid-3">
+            <div class="card small reveal-left">
+                <h3>Trusted Experts</h3>
+                <p>Years of experience delivering high-quality solutions.</p>
+            </div>
 
+            <div class="card small reveal">
+                <h3>Fast Delivery</h3>
+                <p>Projects delivered on time without compromising quality.</p>
+            </div>
+
+            <div class="card small reveal-right">
+                <h3>Secure Solutions</h3>
+                <p>Your data and systems remain protected and stable.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<section class="stats reveal">
+    <div class="container stats-container">
+        <div>
+            <h2 class="counter" data-target="500">0</h2>
+            <p>Happy Clients</p>
+        </div>
+        <div>
+            <h2 class="counter" data-target="120">0</h2>
+            <p>Projects Completed</p>
+        </div>
+        <div>
+            <h2 class="counter" data-target="5">0</h2>
+            <p>Years Experience</p>
+        </div>
+    </div>
+</section>
+
+<<section id="contact" class="section contact-section reveal">
+    <div style="height: 120px;"></div> <!-- spacer to push content below fixed header -->
+    <div class="container">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="contact-intro">
+            Interested in working with us? Reach out today and let’s create something extraordinary together.
+        </p>
+
+        <form id="contact-form" class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn primary">Send Message</button>
+            <p id="form-message"></p>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
     © 2026 N. S. Providers. All rights reserved.
 </footer>
+
+<!-- JS -->
+<script src="js/script.js"></script>
 
 </body>
 </html>
